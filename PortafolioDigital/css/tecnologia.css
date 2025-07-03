@@ -1,0 +1,111 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo claro */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    line-height: 1.6;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Coloca los dos navs uno debajo del otro */
+    gap: 2rem; /* Espacio entre los navs */
+    align-items: center;
+}
+
+/* Primer nav con enlaces */
+.main-nav {
+    width: 100%;
+    background-color: #2c3e50; /* Color de fondo oscuro */
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    gap: 2rem; /* Espacio entre los enlaces */
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Color claro para los enlaces */
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #3498db; /* Color azul al hacer hover */
+}
+
+/* Segundo nav con imágenes */
+.image-nav {
+    width: 90%; /* Ancho relativo del cuadro */
+    background-color: #2c3e50; /* Fondo oscuro para las imágenes */
+    padding: 2rem;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.image-container {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Ajusta las imágenes en varias filas */
+    justify-content: space-around; /* Distribuye las imágenes uniformemente */
+    gap: 1rem; /* Espacio entre las imágenes */
+    padding: 0;
+}
+
+.image-container li {
+    flex: 1 1 30%; /* Cada imagen ocupará aproximadamente el 30% del ancho */
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro del li */
+}
+
+.image-container li img {
+    width: 100%; /* Hace que las imágenes ocupen el ancho de su contenedor */
+    max-width: 120px; /* Controla el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene las proporciones */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición para efectos al pasar el ratón */
+}
+
+/* Efecto hover en las imágenes */
+.image-container li img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-container li {
+        flex: 1 1 45%; /* En pantallas pequeñas, las imágenes ocuparán el 45% */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container li {
+        flex: 1 1 100%; /* En pantallas más pequeñas, las imágenes ocuparán el 100% */
+    }
+}
+

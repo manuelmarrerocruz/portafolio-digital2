@@ -1,0 +1,107 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7; /* Fondo claro */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Color oscuro para el header */
+    padding: 1.5rem 2rem; /* Reducir el padding para que no ocupe mucho espacio */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    position: relative;
+    width: 100%;
+}
+
+/* Imagen */
+header img {
+    width: 120px; /* Tamaño más pequeño para la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para un toque elegante */
+    margin-left: 0; /* Ajusta el margen izquierdo */
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center; /* Centra los elementos del nav */
+    width: 100%; /* Ocupa el 100% del espacio disponible */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos del nav */
+    gap: 2rem;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Color claro para los enlaces */
+    font-size: 1rem; /* Reducir el tamaño de la fuente */
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* Color azul al hacer hover */
+}
+
+/* Contenido principal */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555; /* Texto en gris suave */
+    line-height: 1.8;
+}
+
+p br {
+    margin-bottom: 1rem;
+}
+
+/* Estilo de enlaces dentro de los párrafos */
+p a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #2c3e50; /* Cambiar a color oscuro en hover */
+}
+
+/* Estilo de secciones específicas */
+section {
+    margin: 4rem 0;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header img {
+        width: 80px; /* Hacer la imagen aún más pequeña en pantallas pequeñas */
+    }
+}
+

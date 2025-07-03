@@ -1,0 +1,180 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo claro */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    line-height: 1.6;
+    padding: 0;
+    position: relative; /* Necesario para el posicionamiento absoluto del segundo nav */
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura */
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Color oscuro para el header */
+    padding: 1.5rem 2rem; /* Reducir el padding para que no ocupe mucho espacio */
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del header */
+    position: relative;
+    width: 100%;
+}
+
+/* Imagen "Mi Foto" */
+.header-img {
+    position: absolute;
+    left: 2rem; /* Coloca la imagen a la izquierda con un pequeño margen */
+    width: 120px; /* Tamaño más pequeño para la imagen */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados para un toque elegante */
+}
+
+/* Primer nav con enlaces */
+.main-nav {
+    width: 100%;
+    background-color: #2c3e50; /* Color de fondo oscuro */
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex;
+    justify-content: center; /* Centra los enlaces dentro del nav */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos del nav */
+    gap: 2rem;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    display: inline-block; /* Necesario para usar transform */
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.5s ease; /* Suavidad en el movimiento */
+}
+
+.main-nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Segundo nav con imágenes y contacto */
+.image-nav {
+    background-color: #2c3e50; /* Fondo oscuro */
+    padding: 1.5rem 2rem;
+    width: 100%;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los bloques */
+    align-items: center; /* Alinea verticalmente los elementos */
+    position: absolute; /* Posición relativa para el contenedor */
+    bottom: 0;
+}
+
+.image-container {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.image-container li img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease; /* Efecto suavizado */
+}
+
+.image-container li img:hover {
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+.contact-info {
+    color: #ecf0f1; /* Texto claro */
+    text-align: left; /* Texto alineado a la izquierda */
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #3498db; /* Color de los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #ecf0f1; /* Cambio de color en hover */
+    text-decoration: underline;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-nav {
+        flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-bottom: 1rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
